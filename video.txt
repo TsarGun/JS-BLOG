@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<script>
+//Named Functions
+function officer () {
+  return rank() + " Reginald Thistleton";
+  
+  function rank () { return "Captain"; }
+}
+//alert( officer );
+
+//Function Expression
+//Syntax for Function Declaration
+function sayHi1() {
+  alert( "Hello" );
+}
+//Syntax for Function Expression
+let sayHi2 = function() {
+  alert( "Hello" );
+};
+//alert( sayHi1 );
+//alert( sayHi2 );
+// Before ES6 (ES5 etcetera)
+var multiplyES5 = function(x, y) {
+  return x * y;
+};
+// ES6 and higher
+const multiplyES6 = (x, y) => { return x * y };
+//alert( multiplyES5 );
+//alert( multiplyES6 );
+
+
+
+
+
+</script>
+
+
+
+//rest parameter
+function fun1(a, b){ 
+    return a + b; 
+} 
+console.log(fun1(1, 2)); // 3 
+console.log(fun1(1, 2, 3, 4, 5)); 
+
+// with rest parameter 
+function fun2(...input){ 
+    let sum = 0; 
+    for(let i of input){ 
+        sum+=i; 
+    } 
+    return sum; 
+} 
+console.log(fun2(1,2)); //3 
+console.log(fun2(1,2,3)); //6 
+console.log(fun2(1,2,3,4,5)); //15          
