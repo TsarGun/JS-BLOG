@@ -1,42 +1,85 @@
 <!DOCTYPE html>
+<body>
+<h2>Named Functions</h2>
 <script>
 //Named Functions
 function officer () {
   return rank() + " Reginald Thistleton";
-  
   function rank () { return "Captain"; }
 }
-//alert( officer );
+alert( officer() );
+</script>
+</body>
 
-//Function Expression
+<!DOCTYPE html>
+<body>
+<h2>Function Expression</h2>
+<script>
 //Syntax for Function Declaration
 function sayHi1() {
   alert( "Hello" );
 }
 //Syntax for Function Expression
 let sayHi2 = function() {
-  alert( "Hello" );
+  alert( "HelloOOOOOO" );
 };
-//alert( sayHi1 );
-//alert( sayHi2 );
+alert( sayHi1 );
+alert( sayHi2 );
+</script>
+</body>
+
+<!DOCTYPE html>
+<body>
+  
+<h2>Arrow Functions</h2>
+<script>
 // Before ES6 (ES5 etcetera)
 var multiplyES5 = function(x, y) {
   return x * y;
 };
-// ES6 and higher
-const multiplyES6 = (x, y) => { return x * y };
-//alert( multiplyES5 );
-//alert( multiplyES6 );
-
-
-
-
-
+alert( multiplyES5(1,2));
 </script>
 
+//Arrow Functions
+// ES6 and higher
+const materials = [
+  'Hydrogen',
+  'Helium',
+  'Lithium',
+  'Beryllium'
+];
 
+console.log(materials.map(material => material.length));
 
-//rest parameter
+// expected output: Array [8, 6, 7, 9]
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Optional Arguments</h2>
+
+<p id="demo"></p>
+
+<script>
+myFunction(1,2);
+//myFunction(1);
+
+function myFunction(x, y) {
+  if(y === undefined)
+  {
+  document.getElementById("demo").innerHTML = "Y?";
+  }
+  else
+	{
+	document.getElementById("demo").innerHTML = "X";
+	}
+}
+</script>
+
+</body>
+</html>
+//without rest parameter
 function fun1(a, b){ 
     return a + b; 
 } 
@@ -54,3 +97,76 @@ function fun2(...input){
 console.log(fun2(1,2)); //3 
 console.log(fun2(1,2,3)); //6 
 console.log(fun2(1,2,3,4,5)); //15          
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Scope</h2>
+
+<p>Outside myFunction() classs is undefined.</p>
+
+<p id="demo1"></p>
+
+<p id="demo2"></p>
+
+<script>
+myFunction();
+
+function myFunction() {
+  var classs = "IT354";
+  document.getElementById("demo1").innerHTML = typeof classs + " " + classs;
+}
+document.getElementById("demo2").innerHTML = typeof classs;
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Scope</h2>
+
+<p>A GLOBAL variable can be accessed from any script or function.</p>
+
+<p id="demo"></p>
+
+<script>
+var classsss = "IT354";
+myFunction();
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = "I take " + classsss;
+}
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2> Nested function</h2>
+
+<p>Counting with a local variable.</p>
+
+<p id="demo">0</p>
+
+<script>
+document.getElementById("demo").innerHTML = add();
+function add() {
+  var counter = 1;
+  function plus() {counter += 1;}
+  plus();  
+  return counter; 
+  
+}
+
+</script>
+
+</body>
+</html>
+

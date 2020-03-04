@@ -3,75 +3,145 @@
 <title>FrontPage</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" title="W3 school features">
+<link href="https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Hind Siliguri' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Kavoon' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+<link rel="stylesheet" href="/css/index.css" title="Sadist features">
 <style>
+    body {
+        background-image: url("background.png");
+        background-color: #cccccc;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a,
+    .dropbtn {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover,
+    .dropdown:hover .dropbtn {
+        background-color: red;
+    }
+
+    li.dropdown {
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
     body,
     h1,
     h2,
     h3,
     h4,
-    h5 {
-        font-family: "Raleway", sans-serif
-    }
-
-    h1 {
-        font-size: 3.9em;
-        font-family: "Libre Franklin";
-        font-weight: 600;
-        font-style: oblique;
-    }
-
-    h3 {
-        font-family: Kavoon;
-        font-weight: normal;
-        font-style: normal;
-    }
-
+    h5,
     p {
-        font-family: "Hind Siliguri";
+        font-family: "Kavoon";
         font-weight: normal;
         font-style: normal;
     }
 </style>
 
-<body class="w3-light-grey">
+<body>
 
-    <!-- w3-content defines a container for fixed size centered content, 
-and is wrapped around the whole page content, except for the footer in this example -->
+    <!-- Navbar-->
+    <header class="topnav">
+        <ul>
+
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/pages/articles/Blog.html">Blog</a></li>
+            <li><a href="/pages/articles/ECMAscript/ECMAscript.html">Article</a></li>
+            </li>
+        </ul>
+    </header>
+
+    <!-- Cutting the edges -->
     <div class="w3-content" style="max-width:1400px">
-
-        <!-- Header -->
-        <header class="w3-container w3-center w3-padding-32">
-
-
-        </header>
-
         <!-- Grid -->
         <div class="w3-row">
-
             <!-- Blog entries -->
             <div class="w3-col l8 s12">
                 <!-- Blog entry -->
                 <div class="w3-card-4 w3-margin w3-white">
-                    <iframe width="900" height="500" src="https://www.youtube.com/embed/EAji1HMDNm8" frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                    <div class="w3-container">
-                        <h3>This week we're going to talk about functions and their attributes!</a></h3>
-                        <h5>Date posted:<span class="w3-opacity">February 11, 2020</span></h5>
+                    <div class="resp-container">
+                        <iframe class="resp-iframe" src="https://www.youtube.com/embed/UEH5que72zM" gesture="media"
+                            allow="encrypted-media" allowfullscreen></iframe>
+                        <style>
+                            .resp-iframe {
+                                width: 100%;
+                                height: 450px;
+                            }
+                        </style>
                     </div>
                     <div class="w3-container">
-                        <p>New weekly video guide is out! </p>
+                        <h2>This week we look at basic ways to create objects and deeper!!</h2>
+                        <h5>Date posted:<span class="w3-opacity">March 3, 2020</span></h5>
+                    </div>
+                </div>
+
+                <div class="w3-card-4 w3-margin w3-white">
+                    <div class="resp-container">
+                        <iframe class="resp-iframe" src="https://www.youtube.com/embed/EAji1HMDNm8"  gesture="media"
+                            allow="encrypted-media" allowfullscreen></iframe>
+                        <style>
+                            .resp-iframe {
+                                width: 100%;
+                                height: 450px;
+                            }
+                        </style>
+                    </div>
+                    <div class="w3-container">
+                        <h2>This week we're going to talk about functions and their attributes!</h2>
+                        <h5>Date posted:<span class="w3-opacity">February 11, 2020</span></h5>
                     </div>
                 </div>
                 <hr>
-
                 <!-- Blog entry -->
                 <div class="w3-card-4 w3-margin w3-white">
                     <img src=/pictures/articles/ECMAscript/ES6.jpeg alt="ECMAscript" style="width:100%">
                     <div class="w3-container">
-                        <h3><a href="/pages/articles/ECMAscript/ECMAscript.html">Our first article</a></h3>
+                        <h2><a href="/pages/articles/ECMAscript/ECMAscript.html">Our first article</a></h2>
                         <h5>Date posted: <span class="w3-opacity"> February 12, 2020</span></h5>
                     </div>
                     <div class="w3-container">
@@ -80,15 +150,14 @@ and is wrapped around the whole page content, except for the footer in this exam
                 </div>
                 <!-- END BLOG ENTRIES -->
             </div>
-
             <!-- Introduction menu -->
             <div class="w3-col l4">
                 <!-- About Card -->
                 <div class="w3-card w3-margin w3-margin-top">
                     <img src="/pictures/MainPage/MyPicture.jpg" style="width:100%">
                     <div class="w3-container w3-white">
-                        <h4><b>Maksim Zubritckii</b></h4>
-                        <p>Web page with my assingments for Spring 2020</p>
+                        <h2><b>Maksim Zubritckii</b></h2>
+                        <h5>Web page with my assingments for Spring 2020</h5>
                     </div>
                 </div>
                 <hr>
@@ -97,7 +166,7 @@ and is wrapped around the whole page content, except for the footer in this exam
                 <!-- Ideas / improvments -->
                 <div class="w3-card w3-margin w3-margin-top">
                     <div class="w3-container w3-white">
-                        <h4><b>Ideas / improvments</b></h4>
+                        <h2><b>Ideas / improvments</b></h2>
                         <p>List of ideas for future improvments:</p>
                         <p>1) Make it a table</p>
                         <p>2) Make CSS file myself</p>
@@ -108,16 +177,12 @@ and is wrapped around the whole page content, except for the footer in this exam
                 </div>
                 <hr>
                 <hr>
-
                 <!-- END Introduction Menu -->
             </div>
-
             <!-- END GRID -->
         </div><br>
-
         <!-- END w3-content -->
     </div>
-
     <!-- Footer -->
     <footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
         <p>Powered by Redbull & Coffee</a></p>
