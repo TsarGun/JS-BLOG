@@ -26,6 +26,74 @@
     </ul>
 </header>
 
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    #myInput {
+        background-position: 10px 12px;
+        background-repeat: no-repeat;
+        width: 100%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+    }
+
+    #myUL {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #myUL li a {
+        border: 1px solid #ddd;
+        margin-top: -1px;
+        /* Prevent double borders */
+        background-color: #f6f6f6;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+        display: block
+    }
+
+    #myUL li a:hover:not(.header) {
+        background-color: #eee;
+    }
+</style>
+<div>
+    <h2>My Phonebook</h2>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for the blog post and click on it" title="Type in a name">
+    <ul id="myUL">
+        <li><a href="#5KP">5 Key Principles Of Good Web Usability</a></li>
+        <li><a href="#10UI">10 Usability Issues To Be Aware</a></li>
+        <li><a href="#3CU">3 Common Usability Mistakes In WebDesign</a></li>
+        <li><a href="#MRWF">Mitt Romney web font problem and it's solvation</a></li>
+        <li><a href="#COTV">Comments on the Video Build A Responsive Website With HTML & CSS Tutorial</a></li>
+        <li><a href="#MVMA">Microservices vs Monolith Architecture</a></li>
+    </ul>
+</div>
+<script>
+    function myFunction() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+</script>
+
 <body>
     <!-- Cutting the edges -->
     <div class="w3-content" style="max-width:1400px">
@@ -39,12 +107,10 @@
                 <!-- Blog entry -->
                 <div class="w3-card-4 w3-margin w3-white">
                     <div class="w3-container">
-                        <h2> <a href="https://twitter.com/SenatorRomney?ref_src=twsrc%5Etfw" data-size="large"
+                        <h2><a id="MRWF"></a><a href="https://twitter.com/SenatorRomney?ref_src=twsrc%5Etfw" data-size="large"
                                 data-show-count="false"> Mitt Romney</a> web font problem</h2>
                         <div class="BlogTextContainer">
                             <p>
-
-
                                 In this essay, I'm going to discuss the difference between Microservices and Monolithic
                                 Architecture. They look similar from the perspective that there is one grand application
                                 that does a lot of multiple things, but it's too general, let's go deeper, let's find
@@ -55,7 +121,7 @@
                 </div>
                 <div class="w3-card-4 w3-margin w3-white">
                     <div class="w3-container">
-                        <h2>Microservices vs Monolith Architecture</h2>
+                        <h2><a id="MVMA"></a>Microservices vs Monolith Architecture</h2>
                         <div class="BlogTextContainer">
                             <p>
                                 In this essay, I'm going to discuss the difference between Microservices and
@@ -155,7 +221,7 @@
 
                 <div class="w3-card-4 w3-margin w3-white">
                     <div class="w3-container">
-                        <h2>Comments on the Video Build A Responsive Website With HTML & CSS Tutorial </h2>
+                        <h2><a id="COTV"></a>Comments on the Video Build A Responsive Website With HTML & CSS Tutorial </h2>
                         <div class="BlogTextContainer">
                             <p>
                                 In the study guide was mostly cover simple stuff, however, it's very educational to
@@ -218,7 +284,7 @@
                 <br>
                 <div class="w3-card-4 w3-margin w3-white">
                     <div class="w3-container">
-                        <h2>3 Common Usability Mistakes In Web Design</h2>
+                        <h2><a id="3CU"></a>3 Common Usability Mistakes In Web Design</h2>
                         <div class="BlogTextContainer">
                             <p>
                                 I read an article about 9 Common Usability Mistakes In Web Design. All of the items
@@ -291,7 +357,7 @@
                 <br>
                 <div class="w3-card-4 w3-margin w3-white">
                     <div class="w3-container">
-                        <h2>10 Usability Issues To Be Aware Of</h2>
+                        <h2><a id="10UI"></a>10 Usability Issues To Be Aware Of</h2>
                         <div class="BlogTextContainer">
                             <p>
                                 Making a website is a complicated task and to make it simpler, first of all, is very
@@ -430,7 +496,7 @@
                 <br>
                 <div class="w3-card-4 w3-margin w3-white">
                     <div class="w3-container">
-                        <h2>5 Key Principles Of Good Website Usability</h2>
+                        <h2><a id="5KP"></a> 5 Key Principles Of Good Website Usability</h2>
                         <div class="BlogTextContainer">
                             <p>
                                 Making a website is a complicated task and to make it simpler, first of all, is very
