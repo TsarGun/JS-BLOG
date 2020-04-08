@@ -54,20 +54,18 @@
     #myUL li a:hover:not(.header) {
         background-color: #679267;
     }
-
 </style>
 
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for the blog post and click on it"
-        title="Type in a name">
-        <ul id="myUL">
-            <li><a href="#5KP">5 Key Principles Of Good Web Usability</a></li>
-            <li><a href="#10UI">10 Usability Issues To Be Aware</a></li>
-            <li><a href="#3CU">3 Common Usability Mistakes In WebDesign</a></li>
-            <li><a href="#MRWF">Mitt Romney web font problem and it's solution</a></li>
-            <li><a href="#COTV">Comments on the Video Build A Responsive Website With HTML & CSS Tutorial</a></li>
-            <li><a href="#MVMA">Microservices vs Monolith Architecture</a></li>
-        </ul>
-    <h2>Blog of that Guy</h2>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for the blog post and click on it"
+    title="Type in a name">
+<ul id="myUL">
+    <li><a href="#COTV">Comments on the Video Build A Responsive Website With HTML & CSS Tutorial</a></li>
+    <li><a href="#3CU">3 Common Usability Mistakes In WebDesign</a></li>
+    <li><a href="#5KP">5 Key Principles Of Good Web Usability</a></li>
+    <li><a href="#10UI">10 Usability Issues To Be Aware</a></li>
+    <li><a href="#MRWF">Mitt Romney Web Font Problem</a></li>
+    <li><a href="#MVMA">Microservices vs Monolith Architecture</a></li>
+</ul>
 
 <script>
     function myFunction() {
@@ -105,11 +103,58 @@
                                 data-size="large" data-show-count="false"> Mitt Romney</a> web font problem</h2>
                         <div class="BlogTextContainer">
                             <p>
-                                In this essay, I'm going to discuss the difference between Microservices and Monolithic
-                                Architecture. They look similar from the perspective that there is one grand application
-                                that does a lot of multiple things, but it's too general, let's go deeper, let's find
-                                out
-                                what is the difference between those two approaches.</p>
+                                This post is about the Mitt Romney web font problem. You, probably never heard of it, so
+                                let's start with figuring out what happened. When I started reading, it sounded like a
+                                joke, I was thinking: "A few extra milliseconds of loading wouldn't really change
+                                anything". Well, fun fact, it is. </p>
+                        </div>
+                        <div class="BlogTextContainer">
+                            <p>
+                                The problem occurred because of the usage of multiple weights and styles of the same
+                                typeface together. Down below I provided two samples, so you can see the difference. The
+                                left one is a loading version of the webpage's header and the right one is a loaded
+                                version of the header. </p>
+                        </div>
+                        <div class="BlogTextContainer">
+                            <p>
+                                My next question was: "Why did it happen?". Well, each web font incurs its own separate
+                                flash of invisible text, which leads to the point that by combining two web fonts
+                                together in a single headline, the FOIT has created a race condition that alters the
+                                integrity of the content. Interesting fact, but this problem would've never acquired if
+                                they would've used one font for the entire sign, so sometimes less is more. </p>
+                        </div>
+                        <div class="BlogTextContainer">
+                            <p>
+                                Another interesting fact is that I would highly doubt that this problem would've been so
+                                dramatic 20 years ago. The internet was a lot slower and the people's mindset was
+                                different. I still remember times when I was leaving my computer on, for the entire
+                                night, to download any game, however, nowadays it takes an hour in the worst-case
+                                scenario. With the dramatic change in the speed of the internet, the habits of using the
+                                internet have changed as well. Years ago, you would be trying to read one article
+                                multiple times trying to find an answer for the question, or at least some hints, even
+                                if the webpage looked badly put together or was just hard to read. Nowadays, there are
+                                many similar articles and notes out there, that most of the time it's easier to skim
+                                through the webpage for a few seconds and then figure out if you would like to read it
+                                or not. If not, you usually don't even wait till the page is loaded, you just go to the
+                                next one. </p>
+                        </div>
+                        <div class="BlogTextContainer">
+                            <p>
+                                A few weeks ago, I had a similar issue, I used the fonts from the internet, which had an
+                                issue with loading. That's why I ended up adding the web-safe fonts as the second option
+                                in the CSS file. In case of failure to load both fonts, I added the third option as
+                                serif/sans-serif. It's a lot smaller problem, but even on this scale, we can see that
+                                it's important to have an option in case of failure. In my opinion, the best way to
+                                solve the Mitt Romney web font problem is to load the text with the web-safe fonts
+                                first, and then, after loading a page, switch to the desired ones. It'll make text
+                                loading faster and decrease the chance of failure. If switching failed, it going to be
+                                fine, but won't look as good as it could've been. </p>
+                        </div>
+                        <div class="w3-col l6">
+                            <img src="/pages/pictures/Blog/MittRomney1.jpg" alt="ECMAscript" style="width:100%">
+                        </div>
+                        <div class="w3-col l6">
+                            <img src="/pages/pictures/Blog/MittRomney2.jpg" alt="ECMAscript" style="width:100%">
                         </div>
                     </div>
                 </div>
