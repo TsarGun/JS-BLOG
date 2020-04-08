@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<title>Studying Material</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" title="W3 school features">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Hind Siliguri' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Kavoon' rel='stylesheet'>
+<link rel="stylesheet" type="text/css" href="/css/index.css" media="screen" />
+
+<!-- Navbar-->
+<header class="topnav">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pages/Blog.html">Blog</a></li>
+        <li><a href="/pages/ECMAscript.html">ECMAscript</a></li>
+        <li><a href="/pages/AboutUs.html">About Us</a></li>
+        <li><a class="active" href="">Studying Material</a></li>
+        <li><a class="facebook" href="https://www.facebook.com/TsarCannon/" target="_blank">Facebook</a>
+        </li>
+        <li><a class="youtube" href="https://www.youtube.com/user/Snooooopyss/" target="_blank">Youtube</a>
+        </li>
+        <li><a class="instagram" href="https://www.instagram.com/zub_makss/" target="_blank">Instagram</a>
+        </li>
+    </ul>
+</header>
+
+<div class="w3-content" style="max-width:1400px">
+    <!-- Grid -->
+    <div class="w3-row">
+        <!-- Blog entries -->
+        <div class="w3-col l2">
+            <p> </p>
+        </div>
+        <div class="w3-col l8 s12">
+            <!-- Blog entry -->
+            <div class="w3-card-4 w3-margin w3-white">
+                <div class="resp-container">
+                    <iframe class="resp-iframe" src="https://www.youtube.com/embed/zBB8vFG5zls" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="w3-container">
+                    <h2>This week we're going to talk about Modules, Higher Order Functions and Advanced Array Methods
+                    </h2>
+                    <p>Date posted: <span class="w3-opacity">April 7, 2020</span></p>
+                </div>
+                <div class="w3-container">
+                    <h2>Modules</h2>
+                    <p>The modules are features for code readability. It allows us to divide functionality into
+                        separate pieces. To collect them together used "export" and in entering point "import". Node.js
+                        is based on the usage of modules.</p>
+                    <div class="w3-col l12">
+                        <p>
+                            We use the special object module and place a reference of our function into module.exports.
+                            This lets the CommonJS module system know what we want to expose so that other files can
+                            consume it.
+                        </p>
+                        <img src="/pages/pictures/StudyingMaterial/1.1.png" alt="Ex1.1" style="width:38%">
+                        <p>
+                            Then when someone wants to use myModule, they can require it in their file, like so:
+                        </p>
+                        <img src="/pages/pictures/StudyingMaterial/1.2.png" alt="Ex1.2" style="width:45%">
+                    </div>
+                </div>
+                <div class="w3-container">
+                    <h2>Higher Order Functions</h2>
+                    <p>Higher-Order Functions get other functions as arguments on the entrance or return functions as
+                        their results. Taking function as an argument happens with help of a callback function when the
+                        event listener gets triggered by the higher-order function.
+                    </p>
+                    <div class="w3-col l12">
+                        <p>
+                            For example, the map function on arrays is a higher order function. The map function takes a
+                            function as an argument.
+                        </p>
+                        <img src="/pages/pictures/StudyingMaterial/2.1.png" alt="Ex2.1" style="width:45%">
+                        <p>
+                            Or, with an anonymous function:
+                        </p>
+                        <img src="/pages/pictures/StudyingMaterial/2.2.png" alt="Ex2.2 style=" width:45%">
+                        <p>
+                            Higher-order functions make code simpler and easier to read. Here's the example of the code
+                            above with map function replaced by a loop:
+                        </p>
+                        <img src="/pages/pictures/StudyingMaterial/2.3.png" alt="Ex2.3 style=" width:45%">
+                    </div>
+                </div>
+                <div class="w3-container">
+                    <h2>Advanced Array Methods</h2>
+                </div>
+                <div class="w3-container">
+                    <h2>Higher Order Array Functions</h2>
+                    <p>The logic is that the Higher-Order Function creates a copy of massive and then work with it.</p>
+                    <p>Map - changes all of the elements of the massive and then return the massive.</p>
+                    <p>Filter - filters elements of the massive by some criteria and then returns filtered massive of
+                        the elements. </p>
+                    <p>Find - find the first element which passed the condition. Returns element. </p>
+                    <p>Every - if all of the element has passed criteria returns True, if not - False</p>
+                    <p>Some - if at least one element passed the condition returns True, if none - False</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END BLOG ENTRIES -->
+</div>
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+    <p>Powered by Redbull & Coffee</p>
+</footer>
+
+</body>
+
+</html>
