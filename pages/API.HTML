@@ -53,19 +53,41 @@
                     <p>API stands for Application Programming Interface. An API is a software intermediary that allows
                         two applications to talk to each other. In other words, an API is the messenger that delivers
                         your request to the provider that you’re requesting it from and then delivers the response back
-                        to you.</p>
-                </div>
-                <div class="w3-container">
+                        to you. The developer creates the API on the server and allows the client to talk to it.</p>
                     <h2>REST</h2>
-                    <p>REST is acronym for REpresentational State Transfer.</p>
-                </div>
-                <div class="w3-container">
+                    <p>REST is acronym for REpresentational State Transfer. REST determines how the API looks like.
+                        RESTful Web services allow the requesting systems to access and manipulate textual
+                        representations of Web resources by using a uniform and predefined set of stateless operations.
+                    </p>
+                    <h2>JSON</h2>
+                    <p> JavaScript Object Notation a common format for sending and requesting data through a REST
+                        API. The response that Github sends back to you is also formatted as JSON.
+                        A JSON object looks like a JavaScript Object. In JSON, each property and value must be wrapped
+                        with double quotation marks. </p>
                     <h2>Postman</h2>
-                    <p>REST is acronym for REpresentational State Transfer.</p>
-                </div>
-                <div class="w3-container">
-                    <h2>Example</h2>
-                    <p>REST is acronym for REpresentational State Transfer.</p>
+                    <p>Postman is a popular API client that makes it easy for developers to create, share, test and
+                        document APIs. This is done by allowing users to create and save simple and complex HTTP/s
+                        requests, as well as read their responses. </p>
+                    <h2>The inside of a request with an example.</h2>
+                    <p>1) <b>The endpoint</b> (or route) is the url you request for:</p>
+                    <img src="/pages/pictures/API/EndPoint.png" alt="EndPoint" style="width:50%">
+                    <p>In my example, I was trying to connect to the MongoDB.</p>
+                    <p>2) <b>The method</b> is the type of request you send to the server: (GET, POST, PUT, PATCH,
+                        DELETE): </p>
+                    <img src="/pages/pictures/API/POST.png" alt="POST" style="width:20%">
+                    <p>II used "POST" to save information that was entered on the website and "GET" to be able to see
+                        the
+                        information from the website. </p>
+                    <p>3) <b>The headers</b> are used to provide information to both the client and server. It
+                        can be used for many purposes, such as authentication and providing information about the body
+                        content:</p>
+                    <img src="/pages/pictures/API/Header.png" alt="Header" style="width:40%">
+                    <p>4) <b>The data</b> (or body) contains information you want to be sent to the server:</p>
+                    <img src="/pages/pictures/API/Body1.png" alt="Body1" style="width:25%">
+                    <p>That how POST method looks in my js file.
+                        When user will enter the data in the form, the POST method will look like that before sending it
+                        through the API: </p>
+                    <img src="/pages/pictures/API/Body2.png" alt="Body2" style="width:35%">
                 </div>
             </div>
         </div>
