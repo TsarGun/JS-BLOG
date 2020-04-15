@@ -71,7 +71,7 @@
     <li><a href="#10UI">10 Usability Issues To Be Aware</a></li>
     <li><a href="#MRWF">Mitt Romney Web Font Problem</a></li>
     <li><a href="#MVMA">Microservices vs Monolith Architecture</a></li>
-    <li><a href="#NWVU">Node.js on the V8 fuel</a></li>
+    <li><a href="#NWVU">Node.js with V8 under the hood.</a></li>
 </ul>
 
 <script>
@@ -119,16 +119,29 @@
                                 <p>collect form data;</p>
                                 <p>add, delete, modify data in your database. </p>
                             </div>
-                            <p>
-                                V8 is a powerful open-source Javascript engine provided by Google. It's based on the
-                                Assembler Strongtalk language. Assembler part means that it's a low-level programming
-                                language. However, V8 is C/C++ based language which is still relatively much closer to
-                                the hardware and hence much faster than other high-level languages. The engine is
-                                probably the best word to describe what exactly it does. It
-                                converts the data from the application level to the hardware level. Fun fact, but V8 is
-                                one of the reasons for Google Chrome popularity. </p>
-                            <p>
-                            </p>
+                            <p>The first modern JavaScript engine was V8, created by Google for its Chrome browser. V8
+                                debuted as part of Chrome in 2008, and its performance was much better than any prior
+                                engine. The key innovation was the just-in-time compilation, which can significantly
+                                improve execution times. It's based on the Assembler Strongtalk language. Assembler part
+                                means that it's a low-level programming language. However, V8 is C/C++ based language
+                                which is still relatively much closer to the hardware and hence much faster than other
+                                high-level languages. </p>
+                            <p>Even nowadays V8 is still a decent Javascript engine. There are a few other products up
+                                there like Nitro, SpiderMonkey and ChakraCore.
+                                The engine is probably the best word to describe what exactly it does. It converts the
+                                data from the application level to the hardware level. Fun fact, but V8 is one of the
+                                reasons for Google Chrome popularity. </p>
+                            <p>The current node.js binary cannot work without V8. It would have no Javascript engine
+                                and thus no ability to run code which would obviously render it non-functional. Starting
+                                from
+                                version 6.2 of the Node.js, the V8 supports ES6 that allows it to use let and const,
+                                arrow functions, classes and other cool stuff which makes it faster and easier to use.
+                                Node.js
+                                was not designed to run with any other Javascript engine and, in fact, all the native
+                                code bindings that come with node.js rely on the specific V8 interface between C++ and
+                                Javascript. However, during work on this essay, I was able to find the <a
+                                    href="https://github.com/nodejs/node-chakracore"> version of
+                                    Node.js based on the ChakraCore </a>.</p>
                         </div>
                     </div>
                 </div>
