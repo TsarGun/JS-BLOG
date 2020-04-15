@@ -56,6 +56,10 @@
     #myUL li a:hover:not(.header) {
         background-color: #679267;
     }
+
+    .MoveRight {
+        margin-left: 80px;
+    }
 </style>
 
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for the blog post and click on it"
@@ -67,6 +71,7 @@
     <li><a href="#10UI">10 Usability Issues To Be Aware</a></li>
     <li><a href="#MRWF">Mitt Romney Web Font Problem</a></li>
     <li><a href="#MVMA">Microservices vs Monolith Architecture</a></li>
+    <li><a href="#NWVU">Node.js on the V8 fuel</a></li>
 </ul>
 
 <script>
@@ -101,43 +106,82 @@
                 <!-- Blog entry -->
                 <div class="w3-card-4 w3-margin w3-white">
                     <div class="w3-container">
+                        <h2><a id="NWVU"></a><a href="https://nodejs.org/en/" data-size="large"
+                                data-show-count="false">Node.js</a> with V8 under the hood.</h2>
+                        <div class="BlogTextContainer">
+                            <p>
+                                To be able to work with API it's important to learn about Node.js. Node.js is an
+                                open-source, cross-platform, JavaScript runtime environment that executes JavaScript
+                                code outside of a web browser. Node.js can: </p>
+                            <div class="MoveRight">
+                                <p>generate the dynamic page content; </p>
+                                <p>create, open, read, write, delete, and close files on the server; </p>
+                                <p>collect form data;</p>
+                                <p>add, delete, modify data in your database. </p>
+                            </div>
+                            <p>
+                                V8 is a powerful open-source Javascript engine provided by Google. It's based on the
+                                Assembler Strongtalk language. Assembler part means that it's a low-level programming
+                                language. However, V8 is C/C++ based language which is still relatively much closer to
+                                the hardware and hence much faster than other high-level languages. The engine is
+                                probably the best word to describe what exactly it does. It
+                                converts the data from the application level to the hardware level. Fun fact, but V8 is
+                                one of the reasons for Google Chrome popularity. </p>
+                            <p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-card-4 w3-margin w3-white">
+                    <div class="w3-container">
                         <h2><a id="MRWF"></a><a href="https://twitter.com/SenatorRomney?ref_src=twsrc%5Etfw"
                                 data-size="large" data-show-count="false"> Mitt Romney</a> web font problem</h2>
                         <div class="BlogTextContainer">
                             <p>
-                                This post is about the Mitt Romney web font problem. You, probably never heard of it, so
-                                let's start with figuring out what happened. When I started reading, it sounded like a
+                                This post is about the Mitt Romney web font problem. You, probably never heard of
+                                it, so
+                                let's start with figuring out what happened. When I started reading, it sounded like
+                                a
                                 joke, I was thinking: "A few extra milliseconds of loading wouldn't really change
                                 anything". Well, fun fact, it is. </p>
                         </div>
                         <div class="BlogTextContainer">
                             <p>
                                 The problem occurred because of the usage of multiple weights and styles of the same
-                                typeface together. Down below I provided two samples, so you can see the difference. The
+                                typeface together. Down below I provided two samples, so you can see the difference.
+                                The
                                 left one is a loading version of the webpage's header and the right one is a loaded
                                 version of the header. </p>
                         </div>
                         <div class="BlogTextContainer">
                             <p>
-                                My next question was: "Why did it happen?". Well, each web font incurs its own separate
+                                My next question was: "Why did it happen?". Well, each web font incurs its own
+                                separate
                                 flash of invisible text, which leads to the point that by combining two web fonts
                                 together in a single headline, the FOIT has created a race condition that alters the
-                                integrity of the content. Interesting fact, but this problem would've never acquired if
+                                integrity of the content. Interesting fact, but this problem would've never acquired
+                                if
                                 they would've used one font for the entire sign, so sometimes less is more. </p>
                         </div>
                         <div class="BlogTextContainer">
                             <p>
-                                Another interesting fact is that I would highly doubt that this problem would've been so
+                                Another interesting fact is that I would highly doubt that this problem would've
+                                been so
                                 dramatic 20 years ago. The internet was a lot slower and the people's mindset was
                                 different. I still remember times when I was leaving my computer on, for the entire
                                 night, to download any game, however, nowadays it takes an hour in the worst-case
-                                scenario. With the dramatic change in the speed of the internet, the habits of using the
+                                scenario. With the dramatic change in the speed of the internet, the habits of using
+                                the
                                 internet have changed as well. Years ago, you would be trying to read one article
-                                multiple times trying to find an answer for the question, or at least some hints, even
-                                if the webpage looked badly put together or was just hard to read. Nowadays, there are
+                                multiple times trying to find an answer for the question, or at least some hints,
+                                even
+                                if the webpage looked badly put together or was just hard to read. Nowadays, there
+                                are
                                 many similar articles and notes out there, that most of the time it's easier to skim
-                                through the webpage for a few seconds and then figure out if you would like to read it
-                                or not. If not, you usually don't even wait till the page is loaded, you just go to the
+                                through the webpage for a few seconds and then figure out if you would like to read
+                                it
+                                or not. If not, you usually don't even wait till the page is loaded, you just go to
+                                the
                                 next one. </p>
                         </div>
                         <div class="BlogTextContainer">
